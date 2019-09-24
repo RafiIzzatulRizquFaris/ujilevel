@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body style="background-color: #eaeaea">
+
+
+    <div class="container bg-light" style="padding-bottom: 10%;">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center my-3">Makanan</h1>
+                <form action=""></form>
+            </div>
+        </div>
+        <div class="row">
+            <!-- //burger -->
+            <div class="col-md-4">
+                <h5>Stok Burger :</h5>
+                <p id="stok_burger">12</p>
+                <div class="card text-center" style="width: 22rem;">
+                    <img src="img/burger.jpg" height="198" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text mb-4">Burger</h3>
+                        <div style="margin-inline: 0px" class="d-flex justify-content-around">
+                            <button id="tambah_burger" type="button" class="btn btn-primary btn-sm">+</button>
+                            <p id="jumlah_burger">Silahkan Pesan</p>
+                            <button id="kurang_burger" type="button" class="btn btn-primary btn-sm">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ayam -->
+            <div class="col-md-4">
+                <h5>Stok Ayam :</h5>
+                <p id="stok_burger">12</p>
+                <div class="card text-center" style="width: 22rem;">
+                    <img src="img/ayam.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text mb-4">Ayam</h3>
+                        <div style="margin-inline: 0px" class="d-flex justify-content-around">
+                            <button id="tambah_ayam" type="button" class="btn btn-primary btn-sm">+</button>
+                            <p id="jumlah_ayam">Silahkan Pesan</p>
+                            <button id="kurang_ayam" type="button" class="btn btn-primary btn-sm">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- kentang -->
+            <div class="col-md-4">
+                <h5>Stok Kentang :</h5>
+                <p id="stok_burger">12</p>
+                <div class="card text-center" style="width: 22rem;">
+                    <img src="img/kentang.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-text mb-4">Kentang Goreng</h3>
+                        <div style="margin-inline: 0px" class="d-flex justify-content-around">
+                            <button id="tambah_kentang" type="button" class="btn btn-primary btn-sm">+</button>
+                            <p id="jumlah_kentang">Silahkan Pesan</p>
+                            <button id="kurang_kentang" type="button" class="btn btn-primary btn-sm">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div style="margin-left:25%" id="board-kosong">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <img src="img/empty1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+         <!-- dashboard burger -->
+        <div style="margin:auto;" id="board-burger">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <img id="gambar_burger" width="200" alt="">
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <h5 id="nama_burger"></h5>
+                    <p>Rp.<span id="harga_burger"></span></p>
+                    <button id="bayar_burger" type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">beli</button>
+                    <button id="hapus_burger" class="btn btn-sm btn-danger">Hapus</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- dashboard ayam -->
+        <div style="margin:auto;" id="board-ayam">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <img id="gambar_ayam" width="200" alt="">
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <h5 id="nama_ayam"></h5>
+                    <p>Rp.<span id="harga_ayam"></span></p>
+                    <button id="bayar_ayam" type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">beli</button>
+                    <button id="hapus_ayam" class="btn btn-sm btn-danger">Hapus</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- dashboard kentang -->
+        <div style="margin:auto;" id="board-kentang">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <img id="gambar_kentang" width="200" alt="">
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <h5 id="nama_kentang"></h5>
+                    <p>Rp.<span id="harga_kentang"></span></p>
+                    <button id="bayar_kentang" type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">beli</button>
+                    <button id="hapus_kentang" class="btn btn-sm btn-danger">Hapus</button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <!-- ini tutup -->
+    </div>
+
+    <footer style="background-color: #eaeaea;">
+        <p class="text-center my-2">create by fauzan maulana</p>
+    </footer>
+
+      
+      <!-- Modal burger -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h5>Nama Makanan :</h5>
+                <h6 id="name_makanan"></h6>
+        
+                <h5>Harga Makanan :</h5>
+                <h6>Rp. <span id="harga_makanan"></span></h6>
+
+                <h5>Jumlah Makanan :</h5>
+                <h6 id="jumlah_makanan"><span>pcs</span></h6>
+
+                <h5>Total Makanan :</h5>
+                <h6>Rp. <span id="total_makanan"></span></h6>
+
+                <h5>Bayar :</h5>
+                <input placeholder="Rp." class="form-control" id="bayar_makanan" type="number">
+                
+                <h5>kembalian :</h5>
+                <h6>Rp. <span id="kembalian_makanan"></span></h6>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" id="bayar" class="btn btn-primary">Bayar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      
+    
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
